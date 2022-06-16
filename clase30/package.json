@@ -1,0 +1,48 @@
+{
+  "name": "entregaserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "contenedor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "start_forked": "node src/index.js FORK --port 3000",
+    "start_clustered": "node src/index.js CLUSTER --port 3000",
+    "start_nodemon_forked": "nodemon src/index.js FORK --port 3000",
+    "start_nodemon_clustered": "nodemon src/index.js CLUSTER --port 3000",
+    "start_forever_forked": "forever src/index.js FORK --port 3000 --watch",
+    "start_forever_clustered": "forever src/index.js CLUSTER --port 3000 --watch",
+    "start_pm2_forked": "pm2 start src --watch",
+    "start_pm2_clustered": "pm2 start src -i max --watch",
+    "clase30": "pm2 start -n cluster_node src/index.js -- CLUSTER --port 8081 && pm2 start -n fork1 src/index2.js -- --port 8080 && pm2 start -n fork2 src/index3.js -- --port 8082 && pm2 start -n fork3 src/index4.js -- --port 8083 && pm2 start -n fork4 src/index5.js -- --port 8084  && pm2 start -n fork5 src/index6.js -- --port 8085"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.4",
+    "express-session": "^1.17.3",
+    "faker": "^5.5.3",
+    "handlebars": "^4.7.7",
+    "mongoose": "^6.3.5",
+    "normalizr": "^3.6.2",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "random": "^3.0.6",
+    "socket.io": "^4.4.1",
+    "yargs": "^17.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MelisaPuig/clase7_MelisaPuig.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MelisaPuig/clase7_MelisaPuig/issues"
+  },
+  "homepage": "https://github.com/MelisaPuig/clase7_MelisaPuig#readme"
+}
